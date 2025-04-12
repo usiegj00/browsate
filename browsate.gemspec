@@ -21,7 +21,8 @@ Gem::Specification.new do |spec|
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
-  spec.files         = Dir.glob("{bin,lib}/**/*") + %w[LICENSE.txt README.md]
+  spec.files = Dir.glob("{bin,lib}/**/*")
+  spec.files += %w[LICENSE.txt README.md CHANGELOG.md] if File.exist?("LICENSE.txt")
   spec.bindir        = "bin"
   spec.executables   = ["browsate"]
   spec.require_paths = ["lib"]
