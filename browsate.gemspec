@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Automate Chrome browser sessions with CDP"
   spec.description   = "Navigate Chrome browser sessions and execute JavaScript using CDP via Chromate, with session persistence"
   spec.homepage      = "https://github.com/usiegj00/browsate"
-  spec.license       = "All rights reserved"
+  spec.license       = "Nonstandard"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.6.0")
 
   spec.metadata["homepage_uri"] = spec.homepage
