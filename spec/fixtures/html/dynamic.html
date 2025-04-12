@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browsate Dynamic Content Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    #loading {
+      text-align: center;
+      padding: 20px;
+    }
+    #content {
+      display: none;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .item {
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dynamic Content Test</h1>
+  <p>This page loads content dynamically to test Browsate's waiting capabilities.</p>
+  
+  <div id="loading">Loading content, please wait...</div>
+  
+  <div id="content">
+    <h2>Dynamic Content</h2>
+    <div id="items"></div>
+    <button id="loadMore">Load More Items</button>
+  </div>
+  
+  <script>
+    // Simulate async content loading
+    setTimeout(() => {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+      
+      // Add initial items
+      addItems(5);
+      
+      console.log('Initial content loaded at:', new Date().toISOString());
+    }, 2000);
+    
+    // Function to add items
+    function addItems(count) {
+      const itemsContainer = document.getElementById('items');
+      const startIndex = itemsContainer.children.length;
+      
+      for (let i = 0; i < count; i++) {
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.id = `item-${startIndex + i}`;
+        item.textContent = `Dynamic Item ${startIndex + i + 1} - ${new Date().toISOString()}`;
+        itemsContainer.appendChild(item);
+      }
+      
+      console.log(`Added ${count} items, total: ${itemsContainer.children.length}`);
+    }
+    
+    // Load more button
+    document.getElementById('loadMore').addEventListener('click', () => {
+      console.log('Loading more items...');
+      // Add delay to simulate network request
+      setTimeout(() => {
+        addItems(3);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

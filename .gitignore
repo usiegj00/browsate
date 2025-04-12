@@ -1,0 +1,18 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+/examples/tmp/
+
+# rspec failure tracking
+.rspec_status
+
+# Gem builds
+*.gem
+
+# macOS files
+.DS_Store

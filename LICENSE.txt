@@ -1,0 +1,13 @@
+Copyright (c) 2025 Jonathan Siegel
+
+All rights reserved.
+
+This software and associated documentation files are proprietary.
+No part of this software may be reproduced, distributed, or transmitted in any form
+or by any means without the prior written permission of the copyright holder.
+
+Use of the software is subject to the terms and conditions specified in a separate
+license agreement provided by the copyright holder.
+
+Unauthorized copying, modification, distribution, or use of this software
+is strictly prohibited.
